@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.main">
-        <activity android:name=".main.AppBase"/>
+        <activity android:name=".MusicPlayer"></activity>
+        <activity android:name=".main.AppBase" />
         <activity
             android:name=".main.SplashScreen"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -19,41 +20,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".main.profile.ProfileActivity"/>
-        <activity
-            android:name=".main.profile.StudentRegistration"/>
-        <activity
-            android:name=".main.notes.NoteCreate"/>
-        <activity
-            android:name=".main.attendance.AttendanceActivity"/>
-        <activity
-            android:name=".main.notes.NoteActivity"/>
-        <activity
-            android:name=".main.schedule.Scheduler"/>
-        <activity
-            android:name=".main.schedule.CreateScheduleActivity"/>
-        <activity
-            android:name=".main.communicate.communicateActivity"/>
-        <activity
-            android:name=".main.communicate.StudentEmail"/>
-        <activity
-            android:name=".main.communicate.txtMessage"/>
+        <activity android:name=".main.profile.ProfileActivity" />
+        <activity android:name=".main.profile.StudentRegistration" />
+        <activity android:name=".main.notes.NoteCreate" />
+        <activity android:name=".main.attendance.AttendanceActivity" />
+        <activity android:name=".main.notes.NoteActivity" />
+        <activity android:name=".main.schedule.Scheduler" />
+        <activity android:name=".main.schedule.CreateScheduleActivity" />
+        <activity android:name=".main.communicate.communicateActivity" />
+        <activity android:name=".main.communicate.StudentEmail" />
+        <activity android:name=".main.communicate.txtMessage" />
         <activity
             android:name=".main.components.SettingsActivity"
-            android:label="@string/title_activity_settings"/>
-        <activity
-            android:name=".main.components.About"/>
-        <activity
-            android:name=".main.profile.EditStudentActivity"/>
-        <activity
-            android:name=".main.communicate.EmailOptions"/>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".main.components.About" />
+        <activity android:name=".main.profile.EditStudentActivity" />
+        <activity android:name=".main.communicate.EmailOptions" />
         <activity
             android:name=".main.Login.Login"
-            android:theme="@style/AppTheme.login"/>
+            android:theme="@style/AppTheme.login" />
         <activity
             android:name=".main.Login.SignUp"
-            android:theme="@style/AppTheme.login"/>
+            android:theme="@style/AppTheme.login" />
     </application>
 
 </manifest>

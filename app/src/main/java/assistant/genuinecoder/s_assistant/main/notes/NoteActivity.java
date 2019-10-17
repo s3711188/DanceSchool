@@ -36,6 +36,8 @@ public class NoteActivity extends AppCompatActivity implements ListView.OnItemCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
+
+
         titles = new ArrayList();
         contents = new ArrayList();
 
@@ -44,8 +46,10 @@ public class NoteActivity extends AppCompatActivity implements ListView.OnItemCl
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent launchIntent = new Intent(activity, NoteCreate.class);
                 startActivity(launchIntent);
+                finish();
             }
         });
 
@@ -56,8 +60,10 @@ public class NoteActivity extends AppCompatActivity implements ListView.OnItemCl
     }
 
     private void loadNotes() {
+        //Create NoteList Clear Method or ...ETC
         titles.clear();
         contents.clear();
+
         String qu = "SELECT * FROM NOTES";
         Cursor cursor = Login.handler.execQuery(qu);
         if (cursor == null || cursor.getCount() == 0) {

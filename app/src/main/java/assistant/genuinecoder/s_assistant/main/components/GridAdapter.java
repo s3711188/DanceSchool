@@ -34,6 +34,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import assistant.genuinecoder.s_assistant.MusicPlayer;
 import assistant.genuinecoder.s_assistant.R;
 import assistant.genuinecoder.s_assistant.main.AppBase;
 import assistant.genuinecoder.s_assistant.main.Login.Login;
@@ -179,12 +180,12 @@ public class GridAdapter extends BaseAdapter {
             anim.setRepeatMode(Animation.INFINITE);
             anim.setRepeatCount(Animation.INFINITE);
             imageView.startAnimation(anim);
-        } else if (names.get(position).toString().equals("COMMUNICATE")) {
-            imageView.setImageResource(R.drawable.ic_chat_black_24dp);
+        } else if (names.get(position).toString().equals("MUSIC")) {
+            imageView.setImageResource(R.drawable.music);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, communicateActivity.class);
+                    Intent launchinIntent = new Intent(activity, MusicPlayer.class);
                     activity.startActivity(launchinIntent);
                 }
             });
