@@ -83,6 +83,7 @@ public class AppBase extends AppCompatActivity {
             basicFields.add("NOTES");
             basicFields.add("MUSIC");
             basicFields.add("COMMUNICATE");
+            basicFields.add("STUDENTVIEW");
         }
         adapter = new GridAdapter(this, basicFields);
         gridView.setAdapter(adapter);

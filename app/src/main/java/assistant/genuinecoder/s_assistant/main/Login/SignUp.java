@@ -78,7 +78,7 @@ public class SignUp extends AppCompatActivity {
 
 
 
-        if (!_adminCheck.isChecked()) {
+        if (_adminCheck.isChecked()) {
             access = "Teacher";
         } else {
             access = "User";

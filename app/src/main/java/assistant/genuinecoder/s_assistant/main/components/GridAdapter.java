@@ -36,6 +36,7 @@ import java.util.ArrayList;
 
 import assistant.genuinecoder.s_assistant.MusicPlayer;
 import assistant.genuinecoder.s_assistant.R;
+import assistant.genuinecoder.s_assistant.StudentSchedLoader;
 import assistant.genuinecoder.s_assistant.main.AppBase;
 import assistant.genuinecoder.s_assistant.main.Login.Login;
 import assistant.genuinecoder.s_assistant.main.attendance.AttendanceActivity;
@@ -126,7 +127,27 @@ public class GridAdapter extends BaseAdapter {
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, Scheduler.class);
+                        Intent launchinIntent = new Intent(activity, Scheduler.class);
+                        activity.startActivity(launchinIntent);
+                }
+            });
+            Animation anim = new ScaleAnimation(
+                    0.95f, 1f, // Start and end values for the X axis scaling
+                    0.95f, 1f, // Start and end values for the Y axis scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+            anim.setFillAfter(true); // Needed to keep the result of the animation
+            anim.setDuration(2000);
+            anim.setRepeatMode(Animation.INFINITE);
+            anim.setRepeatCount(Animation.INFINITE);
+            imageView.startAnimation(anim);
+
+        } else if (names.get(position).toString().equals("STUDENTVIEW")) {
+            imageView.setImageResource(R.drawable.ic_date_range_black_24dp);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent launchinIntent = new Intent(activity, StudentSchedLoader.class);
                     activity.startActivity(launchinIntent);
                 }
             });
