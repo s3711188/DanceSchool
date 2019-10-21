@@ -180,12 +180,12 @@ public class GridAdapter extends BaseAdapter {
             anim.setRepeatMode(Animation.INFINITE);
             anim.setRepeatCount(Animation.INFINITE);
             imageView.startAnimation(anim);
-        } else if (names.get(position).toString().equals("MUSIC")) {
-            imageView.setImageResource(R.drawable.music);
+        } else if (names.get(position).toString().equals("COMMUNICATE")) {
+            imageView.setImageResource(R.drawable.ic_chat_black_24dp);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, MusicPlayer.class);
+                    Intent launchinIntent = new Intent(activity, communicateActivity.class);
                     activity.startActivity(launchinIntent);
                 }
             });
@@ -199,6 +199,15 @@ public class GridAdapter extends BaseAdapter {
             anim.setRepeatMode(Animation.INFINITE);
             anim.setRepeatCount(Animation.INFINITE);
             imageView.startAnimation(anim);
+        }else if (names.get(position).toString().equals("MUSIC")) {
+            imageView.setImageResource(R.drawable.music);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent launchinIntent = new Intent(activity, MusicPlayer.class);
+                    activity.startActivity(launchinIntent);
+                }
+            });
         }
 
         textView.setText(names.get(position).toString());

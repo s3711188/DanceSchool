@@ -54,6 +54,17 @@ public class AppBase extends AppCompatActivity {
         classes.add("Class 5");
         classes.add("Class 6");
         classes.add("Class 7");
+        classes.add("Function 1");
+        classes.add("Function 2");
+        classes.add("Function 3");
+        classes.add("Function 4");
+        classes.add("Events 1");
+        classes.add("Events 2");
+        classes.add("Events 3");
+        classes.add("Ceremony 1");
+        classes.add("Ceremony 2");
+        classes.add("Ceremony 3");
+
         gridView = (GridView) findViewById(R.id.grid);
 
         Intent i = getIntent();
@@ -65,13 +76,13 @@ public class AppBase extends AppCompatActivity {
             basicFields.add("SCHEDULER");
             basicFields.add("NOTES");
             basicFields.add("PROFILE");
-            basicFields.add("COMMUNICATE");
             basicFields.add("MUSIC");
+            basicFields.add("COMMUNICATE");
         }
         if (accessLevel.equals("User")) {
-            basicFields.add("COMMUNICATE");
             basicFields.add("NOTES");
             basicFields.add("MUSIC");
+            basicFields.add("COMMUNICATE");
         }
         adapter = new GridAdapter(this, basicFields);
         gridView.setAdapter(adapter);
